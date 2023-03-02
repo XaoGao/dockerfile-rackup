@@ -1,9 +1,10 @@
 FROM ruby:3.1.2-alpine
 
+RUN apk update && apk add --virtual build-dependencies build-base libpq-dev
+
 RUN mkdir -p /home/app
 WORKDIR /home/app
 
-# The files will be owned by app
 COPY Gemfile /home/app/
 COPY Gemfile.lock /home/app/
 
@@ -13,6 +14,6 @@ RUN bundle install
 
 COPY . /home/app/
 
-EXPOSE 9292
+EXPOSE 8081
 
-CMD ["rackup"]
+CMD ["rackup", "-p", "8081"]

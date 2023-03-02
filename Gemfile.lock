@@ -1,6 +1,9 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    nio4r (2.5.8)
+    puma (6.1.1)
+      nio4r (~> 2.0)
     rack (3.0.4.1)
     rackup (2.1.0)
       rack (>= 3)
@@ -12,6 +15,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  puma (~> 6.1, >= 6.1.1)
   rack (~> 3.0, >= 3.0.4.1)
   rackup (~> 2.1)
 
