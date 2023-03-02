@@ -14,6 +14,6 @@ RUN bundle install
 
 COPY . /home/app/
 
-EXPOSE 8081
+EXPOSE 9292
 
-CMD ["rackup", "-p", "8081"]
+CMD ["rackup", "-p", "9292"]
