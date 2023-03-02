@@ -13,5 +13,6 @@ RUN bundle install
 
 COPY . /home/app/
 
-# CMD ["rackup", "-p", "8080"]
+EXPOSE 9292
+
 CMD ["rackup"]
